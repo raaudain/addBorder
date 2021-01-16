@@ -2,15 +2,16 @@
 
 
 function addBorder(picture) {
-    const charsLength = picture[0];
+    const length = picture[0].length + 2;
     const bordered = [];
+    
+    bordered.push("*".repeat(length));
     
     for (let chars of picture) {
         bordered.push("*" + chars + "*");
     }
     
-    bordered.unshift("*".repeat(charsLength.length + 2));
-    bordered.push("*".repeat(charsLength.length + 2));
+    bordered.push("*".repeat(length));
     
     return bordered;
 }
